@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Akun</title>
+    <style>
+        /* Styling untuk tampilan halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Memusatkan form di tengah */
+            background-color: #f4f4f4; /* Warna latar belakang */
+        }
+
+        /* Container utama untuk form */
+        .container {
+            max-width: 600px; /* Memperbesar ukuran container */
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff; /* Latar belakang putih */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        }
+
+        /* Styling untuk input, select, dan tombol */
+        input, select, button {
+            width: 100%; /* Lebar penuh */
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box; /* Menghindari padding merusak lebar elemen */
+        }
+
+        /* Styling khusus untuk radio button agar dalam satu baris */
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Jarak antar radio button */
+        }
+
+        /* Menyusun label dan radio button dalam satu baris */
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap; /* Mencegah label turun ke bawah */
+        }
+
+        /* Styling tombol */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Efek hover pada tombol */
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registrasi Akun</h2>
+        <form action="proses_registrasi.php" method="post">
+            
+            <!-- Input untuk Nama -->
+            <label for="nama">Masukkan nama:</label>
+            <input type="text" id="nama" name="nama" value="Fathur Muttaqi Rahman" required>
+
+            <!-- Input untuk NIM -->
+            <label for="nim">Masukkan NIM:</label>
+            <input type="text" id="nim" name="nim" value="202332154" required>
+
+            <!-- Input untuk Email -->
+            <label for="email">Masukkan email:</label>
+            <input type="email" id="email" name="email" value="fathurmuttaqi1202@gmail.com" required>
+
+            <!-- Input untuk Jenis Kelamin -->
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" id="laki" name="jenis_kelamin" value="Laki-Laki"> Laki-Laki</label>
+                <label><input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+            </div>
+
+            <!-- Dropdown untuk Agama -->
+            <label for="agama">Agama:</label>
+            <select id="agama" name="agama">
+                <option value="Islam" selected>Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
+
+            <!-- Input untuk Password -->
+            <label for="password">Masukkan password:</label>
+            <input type="password" id="password" name="password" value="admin123" required>
+
+            <!-- Input untuk Konfirmasi Password -->
+            <label for="konfirmasi_password">Konfirmasi password:</label>
+            <input type="password" id="konfirmasi_password" name="konfirmasi_password" required>
+
+            <!-- Tombol Daftar -->
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+</body>
+</html>
